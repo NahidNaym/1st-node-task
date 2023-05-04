@@ -33,7 +33,7 @@ yargs.command({
         }
     },
     handler :(item)=> {
-data1.addperson(item.id,item.fname,item.lname,item.city,item.age)
+        data1.addPerson(item.id,item.fname,item.lname,item.city,item.age)
     }
 })
 
@@ -53,11 +53,8 @@ yargs.command ({
     handler :(x)=> {
 
        data1.deleteData (x.id)
-       console.log("you deleted an item")
     }
-  })
-  
-   
+  })   
 
   yargs.command ({
     command : "read",
@@ -73,8 +70,6 @@ yargs.command ({
       data1.readData(x.id)
     }
   })
-//   console.log(yargs.argv)
-
   
 ///////////////////////////////////////////////////////////////////////////////////////////
   yargs.command ({
